@@ -40,7 +40,13 @@
 ---
 ### container images
 ---
-## another slide 
+## to resarch 
+ - panamax
+ - kubernetes
+ - consul
+ - rancher
+ - rancheros
+ - shipyard
 ---
 <!-- .slide: data-background="#555555" -->
 ## A slide with a different background
