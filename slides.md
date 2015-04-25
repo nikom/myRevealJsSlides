@@ -15,6 +15,7 @@
 -
 
 ## bashcompletion
+ - /etc/bash_completion.d/ (yum install ...)
  - wget [bash docker](https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker)
 -
 ## useful commands
@@ -23,6 +24,9 @@
  - start a stopped container and attach to it
     <pre><code> function da () {  
     docker start $1 && docker attach $1 } </code></pre> 
+ - top der laufenden container
+    <pre><code> docker stats $(docker ps -q) </code></pre> 
+ 
 ---
 ## container runs
 -
