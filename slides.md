@@ -29,10 +29,18 @@
  
 ---
 ## container runs
--
+ - reveal JS
+ <pre><code> docker run -d -p 8000:8000 
+ 	-v /Users/nikomahle/Dockerfiles/mySlides:/revealjs/md 
+ 	amouat/revealjs:latest </code></pre> 
+ - dockerui
+ <pre><code> docker run -d -p 9000:9000 --privileged 
+ 	-v /var/run/docker.sock:/var/run/docker.sock 
+ 	dockerui/dockerui </code></pre> 
+---
 ### container images
 ---
-## slide 
+## another slide 
 ---
 <!-- .slide: data-background="#555555" -->
 ## A slide with a different background
