@@ -38,7 +38,18 @@
  	-v /var/run/docker.sock:/var/run/docker.sock 
  	dockerui/dockerui </code></pre> 
 ---
+### Registry
+ - <pre><code>docker run -d -p 5000:5000 registry</code></pre> 
+ - <pre><code>docker run -p 8080:8080 -e REG1=http://localhost:5000/v1/ -d atcol/docker-registry-ui</code></pre>
+ - <pre><code>docker tag jenkins:1.596.2-8u45 localhost:5000/jenkins:1.596.2-8u45</code></pre>
+ - <pre><code>docker push localhost:5000/jenkins:1.596.2-8u45</code></pre>
+
+---
 ### container images
+---
+### Dockerfiles
+ - otechlabs in Dockerhub
+ - devopsil in Dockerhub
 ---
 ## to resarch 
  - panamax
