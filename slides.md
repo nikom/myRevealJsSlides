@@ -47,6 +47,13 @@
 ---
 ### container images
 ---
+### jenkins hacks
+ - get slave.jar
+ <pre><code> wget http://hostname.de:8080/jnlpJars/slave.jar</code></pre> 
+ - connect to jenkins master after manual adding of new node in jenkins master gui
+ <pre><code> wget http://hostname.de:8080/jnlpJars/slave.jar</code></pre>
+ 
+---
 ### Dockerfiles
  - otechlabs in Dockerhub
  - devopsil in Dockerhub
