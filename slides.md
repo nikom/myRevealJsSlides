@@ -18,6 +18,9 @@
  - /etc/bash_completion.d/ (yum install ...)
  - wget [bash docker](https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker)
 -
+## sublime syntax highlightning docker files
+ - https://github.com/asbjornenge/Docker.tmbundle
+-
 ## useful commands
  - remove all containers
   <pre><code> drm -f $(dps -aq) </code></pre> 
@@ -48,6 +51,9 @@
 ### container images
 ---
 ### jenkins hacks
+ - start jenkins master
+ <pre><code>docker run -p 5555:8080 -p 50000:50000 -d -v 
+ 	/Users/nikomahle/Dockerfiles/jenkins/jenkins-data:/var/jenkins_home nikom-jenkins:1.596.2-jdk7u79-1</code></pre> 
  - get slave.jar
  <pre><code> wget http://hostname.de:8080/jnlpJars/slave.jar</code></pre> 
  - connect to jenkins master after manual adding of new node in jenkins master gui
