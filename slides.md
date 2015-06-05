@@ -12,6 +12,7 @@
  - alias d="docker"
  - alias drm="docker rm"
  - alias dps="docker ps"
+ - alias dkd="docker run -d -P"
 -
 
 ## bashcompletion
@@ -21,7 +22,7 @@
 ## sublime syntax highlightning docker files
  - https://github.com/asbjornenge/Docker.tmbundle
 -
-## useful commands
+## useful docker commands
  - remove all containers
   <pre><code> drm -f $(dps -aq) </code></pre> 
  - start a stopped container and attach to it
@@ -29,7 +30,12 @@
     docker start $1 && docker attach $1 } </code></pre> 
  - top der laufenden container
     <pre><code> docker stats $(docker ps -q) </code></pre> 
- 
+ - Kill all running containers
+    <pre><code> docker kill $(docker ps -q)</code></pre> 
+ - delete old containers
+ <pre><code>docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm </code></pre>
+ - delete danling images
+ <pre><code>docker rmi $(docker images -q -f dangling=true)</code></pre>
 ---
 ## container runs
  - reveal JS
