@@ -81,11 +81,24 @@
  <pre><code> docker run -d --name="logspout" --volume=/var/run/docker.sock:/tmp/docker.sock --publish=127.0.0.1:8000:80 gliderlabs/logspout </code></pre> 
  - curl the logs
  <pre><code> curl http://172.17.0.108:8000/logs </pre></code>
+ <pre><code> curl http://172.17.0.108:8000/logs/id:containerid </pre></code>
+ <pre><code> curl http://172.17.0.108:8000/logs/name:containername </pre></code>
+
 -
 ## consul
+ <pre><code>docker run -d -p 8400:8400 -p 8500:8500 -p 8600:53/udp -h node1 progrium/consul -server -bootstrap -ui-dir /ui</pre></code>
+ <pre><code>JOIN_IP="$(docker inspect -f '{{.NetworkSettings.IPAddress}}' node1)"</pre></code>
+ <pre><code>docker run -d --name node2 -h node2 progrium/consul -server -join $JOIN_IP</pre></code>
+ <pre><code>docker run -d --name node3 -h node3 progrium/consul -server -join $JOIN_IP</pre></code>
+
+ <pre><code>curl -s http://10.xx.xx.20:8500/v1/catalog/services</pre></code>
+ <pre><code>curl -s http://10.xx.xx.20:8500/v1/catalog/service/dockerui</pre></code>
+
 -
 ## gliderlabs/registrator
+  <pre><code>docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h $HOSTNAME gliderlabs/registrator consul://10.xx.xx.20:8500</pre></code>
 -
+
 ---
 ## to research 
  - panamax
