@@ -13,6 +13,8 @@
  - alias drm="docker rm"
  - alias dps="docker ps"
  - alias dkd="docker run -d -P"
+ - alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
+
 -
 
 ## bashcompletion
@@ -36,6 +38,7 @@
  <pre><code>docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm </code></pre>
  - delete danling images
  <pre><code>docker rmi $(docker images -q -f dangling=true)</code></pre>
+ 
 ---
 ## container runs
  - reveal JS
@@ -69,14 +72,29 @@
 ### Dockerfiles
  - otechlabs in Dockerhub
  - devopsil in Dockerhub
+--- 
+### ecosystem
+-
+## gliderlabs/logspout
+ - start logspout
+ <pre><code> docker run -d --name="logspout" --volume=/var/run/docker.sock:/tmp/docker.sock --publish=127.0.0.1:8000:80 gliderlabs/logspout </code></pre> 
+ - curl the logs
+ <pre><code> curl http://172.17.0.108:8000/logs </pre></code>
+-
+## consul
+-
+## gliderlabs/registrator
+-
 ---
-## to resarch 
+## to research 
  - panamax
  - kubernetes
  - consul
  - rancher
  - rancheros
  - shipyard
+ - logspout
+ - gliderlabs/registrator
 ---
 <!-- .slide: data-background="#555555" -->
 ## A slide with a different background
