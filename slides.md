@@ -42,31 +42,50 @@
 ---
 ## container runs
  - reveal JS
- <pre><code> docker run -d -p 8000:8000 
- 	-v /Users/nikomahle/Dockerfiles/mySlides:/revealjs/md 
- 	amouat/revealjs:latest </code></pre> 
+
+```
+docker run -d -p 8000:8000 -v
+/Users/nikomahle/Dockerfiles/mySlides:/revealjs/md amouat/revealjs:latest
+```
+
  - dockerui
- <pre><code> docker run -d -p 9000:9000 --privileged 
- 	-v /var/run/docker.sock:/var/run/docker.sock 
- 	dockerui/dockerui </code></pre> 
+
+```
+docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock
+dockerui/dockerui
+```
+
 ---
 ### Registry
- - <pre><code>docker run -d -p 5000:5000 registry</code></pre> 
- - <pre><code>docker run -p 8080:8080 -e REG1=http://localhost:5000/v1/ -d atcol/docker-registry-ui</code></pre>
- - <pre><code>docker tag jenkins:1.596.2-8u45 localhost:5000/jenkins:1.596.2-8u45</code></pre>
- - <pre><code>docker push localhost:5000/jenkins:1.596.2-8u45</code></pre>
+
+```
+docker run -d -p 5000:5000 registry
+docker run -p 8080:8080 -e REG1=http://localhost:5000/v1/ -d atcol/docker-registry-ui
+docker tag jenkins:1.596.2-8u45 localhost:5000/jenkins:1.596.2-8u45
+docker push localhost:5000/jenkins:1.596.2-8u45
+```
 
 ---
 ### container images
 ---
 ### jenkins hacks
  - start jenkins master
- <pre><code>docker run -p 5555:8080 -p 50000:50000 -d -v 
- 	/Users/nikomahle/Dockerfiles/jenkins/jenkins-data:/var/jenkins_home nikom-jenkins:1.596.2-jdk7u79-1</code></pre> 
+
+```
+docker run -p 5555:8080 -p 50000:50000 -d -v 
+/Users/nikomahle/Dockerfiles/jenkins/jenkins-data:/var/jenkins_home nikom-jenkins:1.596.2-jdk7u79-1
+```
+
  - get slave.jar
- <pre><code> wget http://hostname.de:8080/jnlpJars/slave.jar</code></pre> 
+ 
+```
+wget http://hostname.de:8080/jnlpJars/slave.jar 
+```
  - connect to jenkins master after manual adding of new node in jenkins master gui
- <pre><code> wget http://hostname.de:8080/jnlpJars/slave.jar</code></pre>
+
+```
+wget http://hostname.de:8080/jnlpJars/slave.jar
+```
  
 ---
 ### Dockerfiles
@@ -79,32 +98,60 @@
 ## gliderlabs/logspout
  - greift per docker event / socket die Log STDOUT und STDERR der Docker Container ab.
  - start logspout
- <pre><code> docker run -d --name="logspout" --volume=/var/run/docker.sock:/tmp/docker.sock \
- 	--publish=127.0.0.1:8000:80 gliderlabs/logspout </code></pre> 
+
+```
+docker run -d --name="logspout" --volume=/var/run/docker.sock:
+/tmp/docker.sock --publish=127.0.0.1:8000:80 gliderlabs/logspout 
+```
+
  - curl the logs
- <pre><code> curl http://172.17.0.108:8000/logs </pre></code>
- <pre><code> curl http://172.17.0.108:8000/logs/id:containerid </pre></code>
- <pre><code> curl http://172.17.0.108:8000/logs/name:containername </pre></code>
+
+``` 
+curl http://172.17.0.108:8000/logs
+curl http://172.17.0.108:8000/logs/id:containerid
+curl http://172.17.0.108:8000/logs/name:containername
+```
 
 -
 ## consul
  - highly distributed and highly available tool for service discovery
  - http://jlordiales.me/2015/01/23/docker-consul/
- <pre><code>docker run -d -p 8400:8400 -p 8500:8500 -p 8600:53/udp -h node1 progrium/consul -server -bootstrap -ui-dir /ui</pre></code>
- <pre><code>JOIN_IP="$(docker inspect -f '{{.NetworkSettings.IPAddress}}' node1)"</pre></code>
- <pre><code>docker run -d --name node2 -h node2 progrium/consul -server -join $JOIN_IP</pre></code>
- <pre><code>docker run -d --name node3 -h node3 progrium/consul -server -join $JOIN_IP</pre></code>
 
- <pre><code>curl -s http://10.xx.xx.20:8500/v1/catalog/services</pre></code>
- <pre><code>curl -s http://10.xx.xx.20:8500/v1/catalog/service/dockerui</pre></code>
+```
+docker run -d -p 8400:8400 -p 8500:8500 -p 8600:53/udp -h node1 
+progrium/consul -server -bootstrap -ui-dir /ui
+```
+
+```
+JOIN_IP="$(docker inspect -f '{{.NetworkSettings.IPAddress}}' node1)"
+```
+
+```
+docker run -d --name node2 -h node2 progrium/consul -server -join 
+$JOIN_IP
+```
+
+```
+docker run -d --name node3 -h node3 progrium/consul -server -join 
+$JOIN_IP
+```
+
+```
+ curl -s http://10.xx.xx.20:8500/v1/catalog/services
+ curl -s http://10.xx.xx.20:8500/v1/catalog/service/dockerui
+```
 
 -
 ## gliderlabs/registrator
  - http://gliderlabs.com/blog
  - http://jlordiales.me/2015/02/03/registrator
  - autom. Registrierung von Docker Containern 
-  <pre><code>docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h $HOSTNAME \
-  	gliderlabs/registrator consul://10.xx.xx.20:8500</pre></code>
+
+```  
+docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h 
+  $HOSTNAME gliderlabs/registrator consul://10.xx.xx.20:8500
+```
+
 -
 
 ---
