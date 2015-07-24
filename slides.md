@@ -12,6 +12,7 @@
  - alias d="docker"
  - alias drm="docker rm"
  - alias dps="docker ps"
+ - alias dpsas="docker ps -as"
  - alias dkd="docker run -d -P"
  - alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
 
@@ -48,7 +49,7 @@ docker run -d -p 8000:8000 -v
 /Users/nikomahle/Dockerfiles/mySlides:/revealjs/md amouat/revealjs:latest
 ```
 
- - dockerui
+ - best UI: dockerui
 
 ```
 docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock
@@ -88,7 +89,7 @@ wget http://hostname.de:8080/jnlpJars/slave.jar
 ```
  
 ---
-### Dockerfiles
+### cool Dockerfiles
  - otechlabs in Dockerhub
  - devopsil in Dockerhub
 
@@ -153,17 +154,25 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
 ```
 
 -
+## kubernetes
+ - opensource cluster management software von google
+ - scheduler for docker containers
+ - pods, labels, replication controllers
+ - scaling, load balancing, health checking
+ - google cloud or selfhosting
+ - http://www.infoq.com/articles/scaling-docker-with-kubernetes
 
 ---
 ## to research 
  - panamax
- - kubernetes
- - consul
+ - weave
  - rancher
  - rancheros
  - shipyard
- - logspout
- - gliderlabs/registrator
+ - kitematic
+ - dokku
+ - deis
+
 ---
 <!-- .slide: data-background="#555555" -->
 ## A slide with a different background
