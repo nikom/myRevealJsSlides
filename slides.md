@@ -162,6 +162,14 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - google cloud or selfhosting
  - http://www.infoq.com/articles/scaling-docker-with-kubernetes
 
+-
+## kitematic
+ - opensource gui management for docker containers
+ - pretty easy and pretty cool
+ - docker hub integration
+ - inluded virtualbox image
+ - only running on mac and windows
+
 ---
 ## to research 
  - panamax
@@ -169,7 +177,6 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - rancher
  - rancheros
  - shipyard
- - kitematic
  - dokku
  - deis
 
