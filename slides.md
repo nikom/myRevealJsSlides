@@ -94,7 +94,7 @@ wget http://hostname.de:8080/jnlpJars/slave.jar
  - devopsil in Dockerhub
 
 ---
-### ecosystem
+### ecosystem and tools
 -
 ## gliderlabs/logspout
  - greift per docker event / socket die Log STDOUT und STDERR der Docker Container ab.
@@ -169,10 +169,46 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - docker hub integration
  - inluded virtualbox image
  - only running on mac and windows
+ - included in docker toolbox
+
+-
+## CenturyLink 
+ - panamax (drag and drop management)
+ - Lorry.io (docker-compose.yml validator and composer)
+ - DRAY (docker workflow engine)
+ - ImageLayers (visualize docker images and containers)
+
+-
+## panamax 
+ - complex multi container management
+ - runs in virtualbox (coreos) with vagrant and homebrew 
+ - templates (combination of containers)
+ - sharing templates
+ - stitching containers together
+ - fleetctl 
+ - https://www.youtube.com/watch?v=J0XWLiIu41Y 
+
+-
+## Lorry.io 
+ - online docker-compose editor
+ - validator
+ - composer
+ - https://lorry.io 
+
+-
+## DRAY
+ - Docker Workflow Engine
+ - http://dray.it
+
+-
+## ImageLayers
+ - visualize docker images and layers
+ - discover which layer is shared by multiple images
+ - https://imagelayers.io/
 
 ---
 ## to research 
- - panamax
+ - rhel 7 bzw. atomic host
  - weave
  - rancher
  - rancheros
