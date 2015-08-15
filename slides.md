@@ -177,6 +177,7 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - Lorry.io (docker-compose.yml validator and composer)
  - DRAY (docker workflow engine)
  - ImageLayers (visualize docker images and containers)
+ - ZODIAC (deployment and rollback of docker apps)
 
 -
 ## panamax 
@@ -206,9 +207,17 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - discover which layer is shared by multiple images
  - https://imagelayers.io/
 
+-
+## ZODIAC
+ - built on top of docker-compose
+ - Historisierung und Versionierung von deployments 
+ - rollback of container versions
+ - https://github.com/CenturyLinkLabs/zodiac/blob/master/README.md
+
 ---
 ## to research 
  - rhel 7 bzw. atomic host
+ - http://prometheus.io (https://labs.ctl.io/monitoring-docker-services-with-prometheus/)
  - weave
  - rancher
  - rancheros
