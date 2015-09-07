@@ -214,10 +214,15 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - rollback of container versions
  - https://github.com/CenturyLinkLabs/zodiac/blob/master/README.md
 
+-
+## prometheus
+ - open-source systems monitoring and alerting toolkit
+ - https://entropia.de/GPN15:Monitoring_mit_Prometheus
+ - https://labs.ctl.io/monitoring-docker-services-with-prometheus/
+
 ---
 ## to research 
  - rhel 7 bzw. atomic host
- - http://prometheus.io (https://labs.ctl.io/monitoring-docker-services-with-prometheus/)
  - weave
  - rancher
  - rancheros
