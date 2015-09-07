@@ -224,6 +224,8 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - shipyard
  - dokku
  - deis
+ - https://github.com/rarchk/docklock
+ - https://github.com/docktor/docktor
 
 ---
 <!-- .slide: data-background="#555555" -->
