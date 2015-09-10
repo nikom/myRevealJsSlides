@@ -220,6 +220,14 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - https://entropia.de/GPN15:Monitoring_mit_Prometheus
  - https://labs.ctl.io/monitoring-docker-services-with-prometheus/
 
+-
+## dokku (dockerizing simple mini heroku)
+ - uses docker
+ - uses buildstep (Heroku's open source buildpacks)
+ - uses gitreceive
+ - a git push starts building and starting a docker container
+ - http://progrium.com/blog/2013/06/19/dokku-the-smallest-paas-implementation-youve-ever-seen
+
 ---
 ## to research 
  - rhel 7 bzw. atomic host
@@ -227,7 +235,6 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - rancher
  - rancheros
  - shipyard
- - dokku
  - deis
  - https://github.com/rarchk/docklock
  - https://github.com/docktor/docktor
