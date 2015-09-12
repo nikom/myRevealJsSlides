@@ -241,6 +241,7 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - rancher
  - rancheros
  - shipyard
+ - flocker
  - deis
  - https://github.com/rarchk/docklock
  - https://github.com/docktor/docktor
