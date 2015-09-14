@@ -236,6 +236,10 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - rancheros
  - shipyard
  - deis
+ - zuul
+ - ribbon
+ - eureka
+ - hystrix
  - https://github.com/rarchk/docklock
  - https://github.com/docktor/docktor
 
