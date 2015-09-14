@@ -247,6 +247,7 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - ribbon
  - eureka
  - hystrix
+ - https://cloud.google.com/container-engine/
  - https://github.com/rarchk/docklock
  - https://github.com/docktor/docktor
 
