@@ -228,6 +228,12 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - a git push starts building and starting a docker container
  - http://progrium.com/blog/2013/06/19/dokku-the-smallest-paas-implementation-youve-ever-seen
 
+-
+## rancher convoy
+ - docker plugin to backup and restore container (convoy) volumes
+ - https://github.com/rancher/convoy#quick-start-guide
+ - http://rancher.com/introducing-convoy-a-docker-volume-driver-for-backup-and-recovery
+
 ---
 ## to research 
  - rhel 7 bzw. atomic host
@@ -235,6 +241,7 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - rancher
  - rancheros
  - shipyard
+ - flocker
  - deis
  - zuul
  - ribbon
