@@ -229,6 +229,14 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - http://progrium.com/blog/2013/06/19/dokku-the-smallest-paas-implementation-youve-ever-seen
 
 -
+## deis
+ - open source paas für selfhosting zwecke
+ - stack: coreos + docker + heroku light workflow
+ - deploy application mit git push (gitreceive)
+ - includes Heroku buildpacks like dokku
+ - http://deis.io/overview/
+ 
+-
 ## rancher convoy
  - docker plugin to backup and restore container (convoy) volumes
  - https://github.com/rancher/convoy#quick-start-guide
