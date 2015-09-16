@@ -234,12 +234,28 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - https://github.com/rancher/convoy#quick-start-guide
  - http://rancher.com/introducing-convoy-a-docker-volume-driver-for-backup-and-recovery
 
+-
+## rancher container infrastructure platform
+ - framework provides private container services and environments
+ - provides tools and UI, container graphs	
+ - powerful container management platform
+ - resource management, health checking, recovery, service discovery, load balancing...
+ - https://github.com/rancher/rancher#launching-management-server
+
+```
+docker run -d --restart=always -p 8080:8080 rancher/server
+```
+
+-
+## rancher os
+ - 20 mb linux distribution
+ - gesamte os läuft in docker containern
+ - an os made of containers
+
 ---
 ## to research 
  - rhel 7 bzw. atomic host
  - weave
- - rancher
- - rancheros
  - shipyard
  - flocker
  - deis
