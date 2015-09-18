@@ -93,6 +93,13 @@ wget http://hostname.de:8080/jnlpJars/slave.jar
  - otechlabs in Dockerhub
  - devopsil in Dockerhub
 
+-
+## useful DockerFile cmd
+
+```
+RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+```
+
 ---
 ### ecosystem and tools
 -
