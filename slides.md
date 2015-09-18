@@ -1,4 +1,4 @@
-# my docker notes
+﻿# my docker notes
 <br/>
 
 ---
@@ -266,7 +266,7 @@ docker run -d --restart=always -p 8080:8080 rancher/server
  - weave
  - shipyard
  - flocker
- - deis
+ - ruxit
  - zuul
  - ribbon
  - eureka
