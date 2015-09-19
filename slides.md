@@ -271,6 +271,7 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 ## to research 
  - rhel 7 bzw. atomic host
  - hashicorp terraform
+ - hashicorp serf
  - weave
  - shipyard
  - flocker
