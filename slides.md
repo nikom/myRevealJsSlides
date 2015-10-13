@@ -39,6 +39,7 @@
  <pre><code>docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm </code></pre>
  - delete danling images
  <pre><code>docker rmi $(docker images -q -f dangling=true)</code></pre>
+ - https://github.com/chadoe/docker-cleanup-volumes
  
 ---
 ## container runs
