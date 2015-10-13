@@ -186,6 +186,7 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - DRAY (docker workflow engine)
  - ImageLayers (visualize docker images and containers)
  - ZODIAC (deployment and rollback of docker apps)
+ - watchtower (autom. detecting and restarting new cont. with new image)
 
 -
 ## panamax 
@@ -221,6 +222,12 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - Historisierung und Versionierung von deployments 
  - rollback of container versions
  - https://github.com/CenturyLinkLabs/zodiac/blob/master/README.md
+
+-
+## watchtower
+ - https://github.com/CenturyLinkLabs/watchtower/blob/master/README.md
+ - docker pull centurylink/watchtower
+
 
 -
 ## prometheus
@@ -271,6 +278,8 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 ---
 ## to research 
  - rhel 7 bzw. atomic host
+ - hashicorp terraform
+ - hashicorp serf
  - weave
  - shipyard
  - flocker
