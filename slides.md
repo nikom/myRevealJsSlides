@@ -294,9 +294,10 @@ docker run -d --restart=always -p 8080:8080 rancher/server
  - watchtower (autom. detecting and restarting new cont. with new image)
 
 -
-## Gliderlabs
+## Gliderlabs (Jeff Lindsay)
  - registrator
- -
+ - progrium
+ - megalith
 -
 ## Hashicorp
  - terraform
@@ -332,8 +333,10 @@ docker run -d --restart=always -p 8080:8080 rancher/server
  - hashicorp terraform
  - hashicorp serf
  - weave
+ - mesos
  - shipyard
  - flocker
+ - https://ngrok.com
  - ruxit
  - zuul
  - ribbon
