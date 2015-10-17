@@ -1,9 +1,9 @@
-﻿# my docker notes
+﻿# nIkOs dOcKeR nOtEs
 <br/>
 
 ---
 
-## docker cmd cheats
+## favourite docker cmd cheats
 
 -
 
@@ -50,7 +50,7 @@ docker run -d -p 8000:8000 -v
 /Users/nikomahle/Dockerfiles/mySlides:/revealjs/md amouat/revealjs:latest
 ```
 
- - best UI: dockerui
+ - best simple UI: dockerui
 
 ```
 docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock
@@ -102,7 +102,11 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 ```
 
 ---
-### ecosystem and tools
+### Docker stuff 
+ - tools
+ - plugins
+ - gr8 container
+
 -
 ## gliderlabs/logspout
  - greift per docker event / socket die Log STDOUT und STDERR der Docker Container ab.
@@ -162,43 +166,6 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
 ```
 
 -
-## kubernetes
- - opensource cluster management software von google
- - scheduler for docker containers
- - pods, labels, replication controllers
- - scaling, load balancing, health checking
- - google cloud or selfhosting
- - http://www.infoq.com/articles/scaling-docker-with-kubernetes
-
--
-## kitematic
- - opensource gui management for docker containers
- - pretty easy and pretty cool
- - docker hub integration
- - inluded virtualbox image
- - only running on mac and windows
- - included in docker toolbox
-
--
-## CenturyLink 
- - panamax (drag and drop management)
- - Lorry.io (docker-compose.yml validator and composer)
- - DRAY (docker workflow engine)
- - ImageLayers (visualize docker images and containers)
- - ZODIAC (deployment and rollback of docker apps)
- - watchtower (autom. detecting and restarting new cont. with new image)
-
--
-## panamax 
- - complex multi container management
- - runs in virtualbox (coreos) with vagrant and homebrew 
- - templates (combination of containers)
- - sharing templates
- - stitching containers together
- - fleetctl 
- - https://www.youtube.com/watch?v=J0XWLiIu41Y 
-
--
 ## Lorry.io 
  - online docker-compose editor
  - validator
@@ -228,12 +195,75 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - https://github.com/CenturyLinkLabs/watchtower/blob/master/README.md
  - docker pull centurylink/watchtower
 
-
 -
 ## prometheus
  - open-source systems monitoring and alerting toolkit
  - https://entropia.de/GPN15:Monitoring_mit_Prometheus
  - https://labs.ctl.io/monitoring-docker-services-with-prometheus/
+
+-
+## rancher convoy
+ - docker plugin to backup and restore container (convoy) volumes
+ - https://github.com/rancher/convoy#quick-start-guide
+ - http://rancher.com/introducing-convoy-a-docker-volume-driver-for-backup-and-recovery
+
+-
+## rancher os
+ - 20 mb linux distribution
+ - gesamte os läuft in docker containern
+ - an os made of containers
+
+---
+### Docker Management Frameworks
+ - kubernetes
+ - kitematic
+ - panamax
+ - rancher server
+
+-
+## kubernetes
+ ![Alt logo](./images/kubernetes-logo.jpg) 
+ - opensource cluster management software von google
+ - scheduler for docker containers
+ - pods, labels, replication controllers
+ - scaling, load balancing, health checking
+ - google cloud or selfhosting
+ - http://www.infoq.com/articles/scaling-docker-with-kubernetes
+
+-
+## kitematic
+ - opensource gui management for docker containers
+ - pretty easy and pretty cool
+ - docker hub integration
+ - inluded virtualbox image
+ - only running on mac and windows
+ - included in docker toolbox
+
+-
+## panamax 
+ - complex multi container management
+ - runs in virtualbox (coreos) with vagrant and homebrew 
+ - templates (combination of containers)
+ - sharing templates
+ - stitching containers together
+ - fleetctl 
+ - https://www.youtube.com/watch?v=J0XWLiIu41Y 
+
+-
+## rancher container infrastructure platform
+ - framework provides private container services and environments
+ - provides tools and UI, container graphs	
+ - powerful container management platform
+ - resource management, health checking, recovery, service discovery, load balancing...
+ - https://github.com/rancher/rancher#launching-management-server
+
+```
+docker run -d --restart=always -p 8080:8080 rancher/server
+```
+
+
+---
+## PAAS in docker world
 
 -
 ## dokku (dockerizing simple mini heroku)
@@ -250,30 +280,51 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - deploy application mit git push (gitreceive)
  - includes Heroku buildpacks like dokku
  - http://deis.io/overview/
- 
--
-## rancher convoy
- - docker plugin to backup and restore container (convoy) volumes
- - https://github.com/rancher/convoy#quick-start-guide
- - http://rancher.com/introducing-convoy-a-docker-volume-driver-for-backup-and-recovery
+
+---
+## famous companies / commiter groups
 
 -
-## rancher container infrastructure platform
- - framework provides private container services and environments
- - provides tools and UI, container graphs	
- - powerful container management platform
- - resource management, health checking, recovery, service discovery, load balancing...
- - https://github.com/rancher/rancher#launching-management-server
-
-```
-docker run -d --restart=always -p 8080:8080 rancher/server
-```
+## CenturyLink 
+ - panamax (drag and drop management)
+ - Lorry.io (docker-compose.yml validator and composer)
+ - DRAY (docker workflow engine)
+ - ImageLayers (visualize docker images and containers)
+ - ZODIAC (deployment and rollback of docker apps)
+ - watchtower (autom. detecting and restarting new cont. with new image)
 
 -
-## rancher os
- - 20 mb linux distribution
- - gesamte os läuft in docker containern
- - an os made of containers
+## Gliderlabs
+ - registrator
+ -
+-
+## Hashicorp
+ - terraform
+ - serf
+
+-
+## Rancher Labs
+ - rancher server
+ - rancher os
+
+---
+## Netflix stack microservices
+ - Netflix Eureka 
+ - Netflix Ribbon
+ - Netflix Hystrix
+
+-
+## Netflix Eureka 
+ - Service Discovery Server Netflix Eureka allows microservices to register themselves at runtime as they appear in the system landscape.
+
+-
+## Netflix Ribbon 
+ - Dynamic Routing and Load Balancer Netflix Ribbon can be used by service consumers to lookup services at runtime. Ribbon uses the information available in Eureka to locate appropriate service instances. If more than one instance is found, Ribbon will apply load balancing to spread the requests over the available instances. Ribbon does not run as a separate service but instead as an embedded component in each service consumer.
+
+-
+## Netflix Hystrix 
+ - Circuit breaker Netflix Hystrix provides circuit breaker capabilities to a service consumer. If a service doesn’t respond, Hystrix can redirect the call to an internal fallback method in the service consumer. If a service repeatedly fails to respond, Hystrix will open the circuit and fast fail (i.e. fallback method) on every subsequent call until the service is available again. To determine wether the service is available again Hystrix allow some requests to try out the service even if the circuit is open. Hystrix executes embedded within its service consumer.
+
 
 ---
 ## to research 
