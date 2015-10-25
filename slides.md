@@ -90,9 +90,11 @@ wget http://hostname.de:8080/jnlpJars/slave.jar
 ```
  
 ---
-### cool Dockerfiles
- - otechlabs in Dockerhub
- - devopsil in Dockerhub
+### cool Dockerfiles in Dockerhub
+ - otechlabs
+ - devopsil 
+ - progrium
+ - atmoz
 
 -
 ## useful DockerFile cmd
@@ -222,7 +224,7 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
 
 -
 ## kubernetes
- ![Alt logo](./images/kubernetes-logo.jpg) 
+ ![logo](/images/kubernetes-logo.jpg)
  - opensource cluster management software von google
  - scheduler for docker containers
  - pods, labels, replication controllers
@@ -328,7 +330,8 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 
 
 ---
-## to research 
+## still to research / todo
+- tutum
  - rhel 7 bzw. atomic host
  - hashicorp terraform
  - hashicorp serf
@@ -338,6 +341,8 @@ docker run -d --restart=always -p 8080:8080 rancher/server
  - flocker
  - https://ngrok.com
  - ruxit
+ - atlas by hashicorp
+ - pancake.io
  - zuul
  - ribbon
  - eureka
