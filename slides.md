@@ -349,10 +349,13 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 ## Netflix Hystrix 
  - Circuit breaker Netflix Hystrix provides circuit breaker capabilities to a service consumer. If a service doesn’t respond, Hystrix can redirect the call to an internal fallback method in the service consumer. If a service repeatedly fails to respond, Hystrix will open the circuit and fast fail (i.e. fallback method) on every subsequent call until the service is available again. To determine wether the service is available again Hystrix allow some requests to try out the service even if the circuit is open. Hystrix executes embedded within its service consumer.
 
+---
+## microservice mindmap
+![logo](/images/microservice-mindmap.png)
 
 ---
 ## still to research / todo
-- tutum
+ - tutum
  - rhel 7 bzw. atomic host
  - hashicorp terraform
  - hashicorp serf
