@@ -224,45 +224,66 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
 
 -
 ## kubernetes
- ![logo](/images/kubernetes-logo.jpg)
- - opensource cluster management software von google
- - scheduler for docker containers
- - pods, labels, replication controllers
- - scaling, load balancing, health checking
- - google cloud or selfhosting
- - http://www.infoq.com/articles/scaling-docker-with-kubernetes
+
+<table>
+ <div align="left">![logo](/images/kubernetes-logo.jpg)</div>
+	 <div align="left"> - opensource cluster management software von google</div>
+	 <div align="left"> - scheduler for docker containers</div>
+	 <div align="left"> - pods, labels, replication controllers</div>
+	 <div align="left"> - google cloud or selfhosting</div>
+	 <div align="left"> - http://www.infoq.com/articles/scaling-docker-with-kubernetes</div>
+</table> 
 
 -
 ## kitematic
- - opensource gui management for docker containers
- - pretty easy and pretty cool
- - docker hub integration
- - inluded virtualbox image
- - only running on mac and windows
- - included in docker toolbox
+
+<table>
+ <div align="left">![logo](/images/kitematic-logo.png)</div>
+	 <div align="left"> - opensource gui management for docker containers</div>
+	 <div align="left"> - easy to use</div>
+	 <div align="left"> - docker hub integration</div>
+	 <div align="left"> - included virtualbox image</div>
+	 <div align="left"> - only running on mac and windows</div>
+	 <div align="left"> - included in docker toolbox</div>
+</table> 
 
 -
-## panamax 
- - complex multi container management
- - runs in virtualbox (coreos) with vagrant and homebrew 
- - templates (combination of containers)
- - sharing templates
- - stitching containers together
- - fleetctl 
- - https://www.youtube.com/watch?v=J0XWLiIu41Y 
+## kitematic
+![logo](/images/kitematic-screen.png)
+-
+## panamax
+
+<table>
+ <div align="left">![logo](/images/panamax-logo.jpg)</div>
+	 <div align="left"> - complex multi container management</div>
+	 <div align="left"> - runs in virtualbox (coreos) with vagrant and homebrew </div>
+	 <div align="left"> - templates (combination of containers)</div>
+	 <div align="left"> - sharing templates</div>
+	 <div align="left"> - stitching containers together</div>
+	 <div align="left"> - fleetctl</div>
+	 <div align="left"> - https://www.youtube.com/watch?v=J0XWLiIu41Y </div>
+</table> 
 
 -
-## rancher container infrastructure platform
- - framework provides private container services and environments
- - provides tools and UI, container graphs	
- - powerful container management platform
- - resource management, health checking, recovery, service discovery, load balancing...
- - https://github.com/rancher/rancher#launching-management-server
+## panamax
+![logo](/images/panamax-screen.png)
+-
+
+## rancher server platform
+<table>
+ <div align="left">![logo](/images/rancher-logo.png)</div>
+	 <div align="left"> - framework provides private container services and environments</div>
+	 <div align="left"> - powerful container management platform (tools, ui, container graphs)</div>
+	 <div align="left"> - resource management, health checking, recovery, service discovery, load balancing...</div>
+	 <div align="left"> - https://github.com/rancher/rancher#launching-management-server</div>
+</table> 
 
 ```
 docker run -d --restart=always -p 8080:8080 rancher/server
 ```
-
+-
+## rancher server platform
+![logo](/images/rancher-screen.png)
 
 ---
 ## PAAS in docker world
