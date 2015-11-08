@@ -1,107 +1,6 @@
-﻿# nIkOs dOcKeR nOtEs
+﻿# nIkOs dOcKeR, iNfRaStRuCtUrE aNd MiCrOsErViCeS nOtEs
 <br/>
 
----
-
-## favourite docker cmd cheats
-
--
-
-## alias
- - alias dl="docker ps -l -q" -> last container id
- - alias d="docker"
- - alias drm="docker rm"
- - alias dps="docker ps"
- - alias dpsas="docker ps -as"
- - alias dkd="docker run -d -P"
- - alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
-
--
-
-## bashcompletion
- - /etc/bash_completion.d/ (yum install ...)
- - wget [bash docker](https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker)
--
-## sublime syntax highlightning docker files
- - https://github.com/asbjornenge/Docker.tmbundle
--
-## useful docker commands
- - remove all containers
-  <pre><code> drm -f $(dps -aq) </code></pre> 
- - start a stopped container and attach to it
-    <pre><code> function da () {  
-    docker start $1 && docker attach $1 } </code></pre> 
- - top der laufenden container
-    <pre><code> docker stats $(docker ps -q) </code></pre> 
- - Kill all running containers
-    <pre><code> docker kill $(docker ps -q)</code></pre> 
- - delete old containers
- <pre><code>docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm </code></pre>
- - delete danling images
- <pre><code>docker rmi $(docker images -q -f dangling=true)</code></pre>
- - https://github.com/chadoe/docker-cleanup-volumes
- 
----
-## container runs
- - reveal JS
-
-```
-docker run -d -p 8000:8000 -v
-/Users/nikomahle/Dockerfiles/mySlides:/revealjs/md amouat/revealjs:latest
-```
-
- - best simple UI: dockerui
-
-```
-docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock
-dockerui/dockerui
-```
-
----
-### Registry
-
-```
-docker run -d -p 5000:5000 registry
-docker run -p 8080:8080 -e REG1=http://localhost:5000/v1/ -d atcol/docker-registry-ui
-docker tag jenkins:1.596.2-8u45 localhost:5000/jenkins:1.596.2-8u45
-docker push localhost:5000/jenkins:1.596.2-8u45
-```
-
----
-### container images
----
-### jenkins hacks
- - start jenkins master
-
-```
-docker run -p 5555:8080 -p 50000:50000 -d -v 
-/Users/nikomahle/Dockerfiles/jenkins/jenkins-data:/var/jenkins_home nikom-jenkins:1.596.2-jdk7u79-1
-```
-
- - get slave.jar
- 
-```
-wget http://hostname.de:8080/jnlpJars/slave.jar 
-```
- - connect to jenkins master after manual adding of new node in jenkins master gui
-
-```
-wget http://hostname.de:8080/jnlpJars/slave.jar
-```
- 
----
-### cool Dockerfiles in Dockerhub
- - otechlabs
- - devopsil 
- - progrium
- - atmoz
-
--
-## useful DockerFile cmd
-
-```
-RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-```
 
 ---
 ### Docker stuff 
@@ -286,6 +185,108 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 ![logo](/images/rancher-screen.png)
 
 ---
+
+## favourite docker cmd cheats
+
+-
+
+## alias
+ - alias dl="docker ps -l -q" -> last container id
+ - alias d="docker"
+ - alias drm="docker rm"
+ - alias dps="docker ps"
+ - alias dpsas="docker ps -as"
+ - alias dkd="docker run -d -P"
+ - alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
+
+-
+
+## bashcompletion
+ - /etc/bash_completion.d/ (yum install ...)
+ - wget [bash docker](https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker)
+-
+## sublime syntax highlightning docker files
+ - https://github.com/asbjornenge/Docker.tmbundle
+-
+## useful docker commands
+ - remove all containers
+  <pre><code> drm -f $(dps -aq) </code></pre> 
+ - start a stopped container and attach to it
+    <pre><code> function da () {  
+    docker start $1 && docker attach $1 } </code></pre> 
+ - top der laufenden container
+    <pre><code> docker stats $(docker ps -q) </code></pre> 
+ - Kill all running containers
+    <pre><code> docker kill $(docker ps -q)</code></pre> 
+ - delete old containers
+ <pre><code>docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm </code></pre>
+ - delete danling images
+ <pre><code>docker rmi $(docker images -q -f dangling=true)</code></pre>
+ - https://github.com/chadoe/docker-cleanup-volumes
+ 
+-
+## container runs
+ - reveal JS
+
+```
+docker run -d -p 8000:8000 -v
+/Users/nikomahle/Dockerfiles/mySlides:/revealjs/md amouat/revealjs:latest
+```
+
+ - best simple UI: dockerui
+
+```
+docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock
+dockerui/dockerui
+```
+
+-
+### Registry
+
+```
+docker run -d -p 5000:5000 registry
+docker run -p 8080:8080 -e REG1=http://localhost:5000/v1/ -d atcol/docker-registry-ui
+docker tag jenkins:1.596.2-8u45 localhost:5000/jenkins:1.596.2-8u45
+docker push localhost:5000/jenkins:1.596.2-8u45
+```
+
+-
+### container images
+-
+### jenkins hacks
+ - start jenkins master
+
+```
+docker run -p 5555:8080 -p 50000:50000 -d -v 
+/Users/nikomahle/Dockerfiles/jenkins/jenkins-data:/var/jenkins_home nikom-jenkins:1.596.2-jdk7u79-1
+```
+
+ - get slave.jar
+ 
+```
+wget http://hostname.de:8080/jnlpJars/slave.jar 
+```
+ - connect to jenkins master after manual adding of new node in jenkins master gui
+
+```
+wget http://hostname.de:8080/jnlpJars/slave.jar
+```
+ 
+-
+### cool Dockerfiles in Dockerhub
+ - otechlabs
+ - devopsil 
+ - progrium
+ - atmoz
+
+-
+## useful DockerFile cmd
+
+```
+RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+```
+
+---
 ## PAAS in docker world
 
 -
@@ -323,8 +324,10 @@ docker run -d --restart=always -p 8080:8080 rancher/server
  - megalith
 -
 ## Hashicorp
- - terraform
- - serf
+<table>
+	 <div align="left"> HashiCorp is the creator of the open source projects Vagrant, Packer, Terraform, Serf, and Consul, and the commercial product Atlas.</div>
+   <div align="left">![logo](/images/hashicorp-ecosystem.png)</div>
+</table> 
 
 -
 ## Rancher Labs
@@ -354,18 +357,44 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 ![logo](/images/microservice-mindmap.png)
 
 ---
+## infrastructure solutions
+
+-
+## hashicorp terraform 
+ - creating, combining, and modifying infrastructure
+ - CAPS (Chef, Ansible, Puppet, Salt) are mainly for centrally controlling what lives inside a large number of instances.  I.e. processes, files, etc.
+ - terraform is mainly for creating instances themselves (and other cloud resources like load balancers etc).
+ - codify entire infrastructures and datacenters into high-level abstractions for easier replication and management
+ - https://www.scriptrock.com/articles/infrastructure-as-code-showdown-terraform-vs.-cloudformation
+
+-
+## hashicorp packer 
+ - tool for creating machine images and deployable artifacts such as AMIs, OpenStack images, Docker containers, etc.
+ - 
+
+-
+## hashicorp serf 
+ - tool for cluster membership and failure detection. Consul uses Serf’s gossip protocol as the foundation for service discovery.
+ - 
+
+-
+## hashicorp vagrant 
+ - tool for managing development environments that mirror production
+
+-
+## hashicorp atlas 
+ - unites Packer, Terraform, and Consul to make application delivery a versioned, auditable, repeatable, and collaborative process.
+
+---
 ## still to research / todo
  - tutum
  - rhel 7 bzw. atomic host
- - hashicorp terraform
- - hashicorp serf
  - weave
  - mesos
  - shipyard
  - flocker
  - https://ngrok.com
  - ruxit
- - atlas by hashicorp
  - pancake.io
  - zuul
  - ribbon
