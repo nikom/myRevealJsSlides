@@ -375,6 +375,16 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 ## Netflix Hystrix 
  - Circuit breaker Netflix Hystrix provides circuit breaker capabilities to a service consumer. If a service doesn’t respond, Hystrix can redirect the call to an internal fallback method in the service consumer. If a service repeatedly fails to respond, Hystrix will open the circuit and fast fail (i.e. fallback method) on every subsequent call until the service is available again. To determine wether the service is available again Hystrix allow some requests to try out the service even if the circuit is open. Hystrix executes embedded within its service consumer.
 
+-
+## Netflix Zuul 
+ - Zuul is the front door for all requests from devices and web sites to the backend of the Netflix streaming application. As an edge service application, Zuul is built to enable dynamic routing, monitoring, resiliency and security. It also has the ability to route requests to multiple Amazon Auto Scaling Groups as appropriate.
+ - https://github.com/Netflix/zuul/wiki/Getting-Started
+
+-
+## Netflix Ribbon 
+ - Ribbon is a client side IPC library that is battle-tested in cloud. It provides the following features 
+ Load balancing, Fault tolerance Multiple protocol (HTTP, TCP, UDP) support in an asynchronous and reactive  model, Caching and batching
+
 ---
 ## microservice mindmap
 ![logo](/images/microservice-mindmap.png)
@@ -417,10 +427,7 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - flocker
  - https://ngrok.com
  - pancake.io
- - zuul
- - ribbon
- - eureka
- - hystrix
+ - wercker http://devcenter.wercker.com/learn/basics/introduction.html
  - https://cloud.google.com/container-engine/
  - https://github.com/rarchk/docklock
  - https://github.com/docktor/docktor
