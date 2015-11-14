@@ -416,7 +416,6 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - shipyard
  - flocker
  - https://ngrok.com
- - ruxit
  - pancake.io
  - zuul
  - ribbon
