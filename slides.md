@@ -227,6 +227,7 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 -
 ## container runs
  - reveal JS
+ - markdown syntax cheat: http://stationinthemetro.com/wp-content/uploads/2013/04/Markdown_Cheat_Sheet_v1-1.pdf
 
 ```
 docker run -d -p 8000:8000 -v
@@ -241,13 +242,20 @@ dockerui/dockerui
 ```
 
 -
-### Registry
+### Registry v1
 
 ```
 docker run -d -p 5000:5000 registry
 docker run -p 8080:8080 -e REG1=http://localhost:5000/v1/ -d atcol/docker-registry-ui
 docker tag jenkins:1.596.2-8u45 localhost:5000/jenkins:1.596.2-8u45
 docker push localhost:5000/jenkins:1.596.2-8u45
+```
+
+-
+### Registry v2
+
+```
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
 ```
 
 -
