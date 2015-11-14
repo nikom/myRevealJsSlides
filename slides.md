@@ -420,6 +420,7 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 ---
 ## still to research / todo
+ - sloppy.io (CaaS)
  - rhel 7 bzw. atomic host
  - weave
  - mesos
