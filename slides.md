@@ -103,6 +103,14 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - https://labs.ctl.io/monitoring-docker-services-with-prometheus/
 
 -
+## ruxit
+<table>
+ <div align="left">Full stack web application monitoring (SaaS)</div>
+ <div align="left">Web, Application, Server, Network, Cloud Monitoring (not open source)</div>
+ <div align="left">![logo](/images/ruxit-screen.png)</div>
+</table>
+
+-
 ## rancher convoy
  - docker plugin to backup and restore container (convoy) volumes
  - https://github.com/rancher/convoy#quick-start-guide
