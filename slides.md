@@ -298,6 +298,13 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 ## PAAS in docker world
 
 -
+## tutum
+<table>
+ <div align="left">docker platform across any cloud</div>
+ <div align="left">![logo](/images/tutum-screen.png)</div>
+</table> 
+
+-
 ## dokku (dockerizing simple mini heroku)
  - uses docker
  - uses buildstep (Heroku's open source buildpacks)
@@ -395,7 +402,6 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 ---
 ## still to research / todo
- - tutum
  - rhel 7 bzw. atomic host
  - weave
  - mesos
