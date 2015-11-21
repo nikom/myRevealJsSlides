@@ -193,6 +193,25 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 ![logo](/images/rancher-screen.png)
 
 ---
+### Security
+ - docker-bench-security
+ - docklock
+ - https://docs.docker.com/engine/articles/security/
+
+-
+## docker-bench-security
+<table>
+	 <div align="left">docker container, that checks several best practices </div>
+	 <div align="left"> - https://github.com/docker/docker-bench-security</div>
+   	 <div align="left">![screen](/images/security-benchmark.png)</div>
+</table> 
+
+-
+## docklock
+ - lets you encrypt your images and critical data
+ - https://github.com/rarchk/docklock
+
+---
 
 ## favourite docker cmd cheats
 
@@ -423,14 +442,14 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - sloppy.io (CaaS)
  - rhel 7 bzw. atomic host
  - weave
- - mesos
+ - mesos (https://mesos.apache.org)
+ - marathon (https://github.com/sloppyio/marathon)
  - shipyard
  - flocker
  - https://ngrok.com
  - pancake.io
  - wercker http://devcenter.wercker.com/learn/basics/introduction.html
  - https://cloud.google.com/container-engine/
- - https://github.com/rarchk/docklock
  - https://github.com/docktor/docktor
 
 ---
