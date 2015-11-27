@@ -1,0 +1,28 @@
+{
+    "project": "nikom-slides",
+    "services": [
+        {
+            "id": "microservice-docker-slides",
+            "apps": [
+                {
+                    "id": "revealjs",
+                    "domain": {
+                        "type": "HTTP",
+                        "uri": "nikom-slides.sloppy.zone"
+                    },
+                    "mem": 256,
+                    "image": "nikom/dockerslides",
+                    "instances": 1,
+                    "port_mappings": [
+                        {
+                            "container_port": 8000
+                        }
+                    ],
+                    "env": {
+                        "MESSAGE": "Sloppy rulez"
+                    }
+                }
+            ]
+        }
+    ]
+}
