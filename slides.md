@@ -333,6 +333,14 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 </table> 
 
 -
+## sloppy.io
+<table>
+ <div align="left">container as a service (beta status)</div>
+  <div align="left">sloppy.json config file</div>
+ <div align="left">![logo](/images/sloppy-screen.png)</div>
+</table> 
+
+-
 ## dokku (dockerizing simple mini heroku)
  - uses docker
  - uses buildstep (Heroku's open source buildpacks)
@@ -440,7 +448,6 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 ---
 ## still to research / todo
- - sloppy.io (CaaS)
  - rhel 7 bzw. atomic host
  - weave
  - mesos (https://mesos.apache.org)
