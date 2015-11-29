@@ -462,5 +462,5 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 ---
 <!-- .slide: data-background="#555555" -->
-## A slide with a different background
+## copyright Niko Mahle niko.mahle@googlemail.com
 ---
