@@ -341,6 +341,14 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 </table> 
 
 -
+## giantswarm.io
+<table>
+ <div align="left">container as a service (alpha status)</div>
+  <div align="left"></div>
+ <div align="left"></div>
+</table> 
+
+-
 ## dokku (dockerizing simple mini heroku)
  - uses docker
  - uses buildstep (Heroku's open source buildpacks)
