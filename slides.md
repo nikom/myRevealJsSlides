@@ -465,6 +465,8 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - https://ngrok.com
  - pancake.io
  - wercker http://devcenter.wercker.com/learn/basics/introduction.html
+ - https://medium.com/@calavera/docker-flame-graphs-f9523e98d57d#.qfmp4xnpj
+ - https://github.com/crosbymichael/docker-stress stress test 4 docker
  - https://cloud.google.com/container-engine/
  - https://github.com/docktor/docktor
 
