@@ -128,6 +128,9 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - kitematic
  - panamax
  - rancher server
+ - mesos
+ - swarm
+ - shipyard
 
 -
 ## kubernetes
@@ -192,12 +195,41 @@ docker run -d --restart=always -p 8080:8080 rancher/server
 ## rancher server platform
 ![logo](/images/rancher-screen.png)
 
+-
+## mesos
+
+<table>
+ <div align="left">![logo](/images/mesos-logo.png)</div>
+	 <div align="left"> - open-source cluster manager by Apache</div>
+	 <div align="left"> - designed to scale to large clusters involving hundreds or thousands of hosts</div>
+	 <div align="left"> - using zookeeper, Marathon Scheduler, ...</div>
+</table> 
+
+-
+## swarm
+
+<table>
+	 <div align="left"> - native clustering tool for Docker</div>
+	 <div align="left"> - uses the standard Docker API</div>
+	 <div align="left"> - turns a pool of Docker hosts into a single, virtual Docker host</div>
+</table> 
+
+-
+## shipyard
+
+<table>
+ <div align="left">![logo](/images/shipyard-logo.png)</div>
+	 <div align="left"> - https://shipyard-project.com</div>
+	 <div align="left"> - 100% compatible with the Docker Remote API</div>
+</table> 
+
 ---
 ### Security
  - docker-bench-security
  - docklock
  - https://docs.docker.com/engine/articles/security/
  - https://www.ctl.io/developers/blog/post/tutorial-protecting-sensitive-info-docker
+ - updates in docker 1.10 (seccomp, usernamespaces, ...)
 
 -
 ## docker-bench-security
@@ -381,6 +413,7 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - registrator
  - progrium
  - megalith
+
 -
 ## Hashicorp
 <table>
@@ -456,11 +489,12 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 ---
 ## still to research / todo
+ - weave scope
+ - weave run
+ - weave net
  - rhel 7 bzw. atomic host
- - weave
- - mesos (https://mesos.apache.org)
  - marathon (https://github.com/sloppyio/marathon)
- - shipyard
+ - https://github.com/Yelp/dockersh
  - flocker
  - https://ngrok.com
  - pancake.io
