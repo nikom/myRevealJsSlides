@@ -124,6 +124,7 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
 
 ---
 ### Docker Management Frameworks
+ - simple solution: dockerui
  - kubernetes
  - kitematic
  - panamax
@@ -131,6 +132,22 @@ docker run -d -v /var/run/docker.sock:/tmp/docker.sock -h
  - mesos
  - swarm
  - shipyard
+
+-
+## dockerui
+
+<table>
+ 	 <div>![logo](/images/dockerui-1.png)</div>
+	 <div align="left"> - simple solution, to monitor, start and stop containers</div>
+</table> 
+
+-
+## dockerui
+
+<table>
+ 	 <div>![logo](/images/dockerui-2.png)</div>
+	 <div align="left"> - https://github.com/crosbymichael/dockerui</div>
+</table> 
 
 -
 ## kubernetes
