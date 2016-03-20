@@ -1,5 +1,3 @@
-# SCM-Manager (scm-server)
-#
 FROM amouat/revealjs:latest
 MAINTAINER Niko Mahle <niko.mahle@googlemail.com>
 
