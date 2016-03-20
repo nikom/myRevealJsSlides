@@ -1,4 +1,4 @@
-﻿# nIkOs dOcKeR, iNfRaStRuCtUrE aNd MiCrOsErViCeS nOtEs
+﻿#  dOcKeR, iNfRaStRuCtUrE aNd MiCrOsErViCeS nOtEs
 <br/>
 
 
@@ -413,6 +413,25 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - includes Heroku buildpacks like dokku
  - http://deis.io/overview/
 
+-
+## wercker
+ - http://devcenter.wercker.com/learn/basics/introduction.html
+ - Docker-based platform for developing, building and delivering applications as microservices, containers and in the cloud.
+ - wercker workflow: develop, build, notify, deploy to docker hub, private registry
+ - API call to a scheduler (such as Kubernetes or Mesosphere) to notify that there is a new version of a container image ready to be scheduled.
+
+-
+## wercker
+<table>
+ <div align="left">![logo](/images/wercker-1.png)</div>
+</table> 
+
+-
+## wercker
+<table>
+ <div align="left">![logo](/images/wercker-2.png)</div>
+</table> 
+
 ---
 ## famous companies / commiter groups
 
@@ -505,6 +524,20 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - unites Packer, Terraform, and Consul to make application delivery a versioned, auditable, repeatable, and collaborative process.
 
 ---
+## some other great infrastructure solutions
+
+-
+## pancake.io
+ - hosting dropbox files as static web pages
+
+-
+## ngrok
+ - https://ngrok.com
+ - secure tunnels to localhost
+ - expose a local web server to the public internet
+
+
+---
 ## still to research / todo
  - weave scope
  - weave run
@@ -513,13 +546,12 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - marathon (https://github.com/sloppyio/marathon)
  - https://github.com/Yelp/dockersh
  - flocker
- - https://ngrok.com
- - pancake.io
- - wercker http://devcenter.wercker.com/learn/basics/introduction.html
  - https://medium.com/@calavera/docker-flame-graphs-f9523e98d57d#.qfmp4xnpj
  - https://github.com/crosbymichael/docker-stress stress test 4 docker
  - https://cloud.google.com/container-engine/
  - https://github.com/docktor/docktor
+
+
 
 ---
 <!-- .slide: data-background="#555555" -->
