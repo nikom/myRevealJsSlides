@@ -27,6 +27,21 @@ curl http://172.17.0.108:8000/logs/name:containername
 ```
 
 -
+## pprof and flame graph: performance tests
+ - docker-stress go stress test tool https://github.com/crosbymichael/docker-stress
+ - go lang package https://golang.org/pkg/net/http/pprof/
+ - Virtualization: https://medium.com/@calavera/docker-flame-graphs-f9523e98d57d#.qfmp4xnpj
+
+-
+## flocker data volume management
+ - a Flocker data volume, called a dataset, is portable and can be used with any container in your cluster.
+ - Flocker manages Docker containers and data volumes together. 
+ - When you use Flocker to manage your stateful microservice, your volumes will follow your containers when they move between different hosts in your cluster.
+ - https://clusterhq.com/flocker/introduction/
+ - kubernetes integration: https://github.com/kubernetes/kubernetes/tree/release-1.2/examples/flocker/
+
+
+-
 ## consul
  - highly distributed and highly available tool for service discovery
  - http://jlordiales.me/2015/01/23/docker-consul/
@@ -545,8 +560,6 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - rhel 7 bzw. atomic host
  - marathon (https://github.com/sloppyio/marathon)
  - https://github.com/Yelp/dockersh
- - flocker
- - https://medium.com/@calavera/docker-flame-graphs-f9523e98d57d#.qfmp4xnpj
  - https://github.com/crosbymichael/docker-stress stress test 4 docker
  - https://cloud.google.com/container-engine/
  - https://github.com/docktor/docktor
