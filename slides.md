@@ -560,7 +560,6 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - rhel 7 bzw. atomic host
  - marathon (https://github.com/sloppyio/marathon)
  - https://github.com/Yelp/dockersh
- - https://github.com/crosbymichael/docker-stress stress test 4 docker
  - https://cloud.google.com/container-engine/
  - https://github.com/docktor/docktor
 
