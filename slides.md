@@ -558,6 +558,7 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - weave run
  - weave net
  - rhel 7 bzw. atomic host
+ - serverspec http://www.infrabricks.de/blog/2015/04/16/docker-container-mit-serverspetesten-teil-2/
  - marathon (https://github.com/sloppyio/marathon)
  - https://github.com/Yelp/dockersh
  - https://cloud.google.com/container-engine/
