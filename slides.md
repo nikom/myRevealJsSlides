@@ -428,6 +428,12 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - includes Heroku buildpacks like dokku
  - http://deis.io/overview/
 
+## deis
+<table>
+ <div align="left">workflow</div>
+ <div align="left">![logo](/images/deis.png)</div>
+</table> 
+
 -
 ## wercker
  - http://devcenter.wercker.com/learn/basics/introduction.html
