@@ -1,8 +1,8 @@
 {
-    "project": "nikom-slides",
+    "project": "nikomslides",
     "services": [
         {
-            "id": "microservice-docker-slides",
+            "id": "dockerslides",
             "apps": [
                 {
                     "id": "revealjs",
