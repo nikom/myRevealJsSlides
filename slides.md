@@ -262,6 +262,8 @@ docker run -d --restart=always -p 8080:8080 rancher/server
  - https://docs.docker.com/engine/articles/security/
  - https://www.ctl.io/developers/blog/post/tutorial-protecting-sensitive-info-docker
  - updates in docker 1.10 (seccomp, usernamespaces, ...)
+ - yubico https://www.yubico.com/why-yubico/for-businesses/developer-platforms/docker
+ - notary (https://github.com/docker/notary)
 
 -
 ## docker-bench-security
@@ -428,9 +430,9 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - includes Heroku buildpacks like dokku
  - http://deis.io/overview/
 
+-
 ## deis
 <table>
- <div align="left">workflow</div>
  <div align="left">![logo](/images/deis.png)</div>
 </table> 
 
