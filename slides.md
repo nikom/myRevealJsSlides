@@ -571,8 +571,7 @@ RUN rm /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
  - https://github.com/Yelp/dockersh
  - https://cloud.google.com/container-engine/
  - https://github.com/docktor/docktor
-
-
+ - Container Monitoring: https://sematext.com/blog/2016/06/28/top-docker-metrics-to-watch/?mkt_tok=eyJpIjoiWkRJNU5qSXhOVEkwWldKbSIsInQiOiJJZGVnbjVRN3g3dlluRUI3ZUJ6RVRPUVBRYjk0cmpmY3FGZDQ5QTNsMmJpVW5KcURhOUZXbnVPaEJ4QlwvbStJRkpJdlpjVVhTM3RmRFJXejdLZ1N3NUg2d0ZmK3I5THU5V2xrdTEyQnJibjA9In0%3D
 
 ---
 <!-- .slide: data-background="#555555" -->
